@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de la Ruleta</title>
+    <link rel="stylesheet" href="results.css">
+</head>
+<body>
+    <div class="spinner-container" id="spinner-container">
+        <div class="spinner"></div>
+    </div>
+    <div class="container" id="results-container" style="display: none;">
+        <h1>Resultados de las Tiradas</h1>
+        <div id="result-container">
+            <table id="result-table">
+                <thead>
+                    <tr>
+                        <th>Tirada</th>
+                        <th>Número que ha salido</th>
+                        <th>Color</th>
+                        <th>Crédito antes de la apuesta</th>
+                        <th>Dinero apostado</th>
+                        <th>Resultado</th>
+                        <th>Dinero después de la apuesta</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="charts-container">
+            <div class="chart">
+                <canvas id="win-loss-chart"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="color-frequency-chart"></canvas>
+            </div>
+        </div>
+        <div id="number-frequency-container">
+            <canvas id="number-frequency-chart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="results.js"></script>
+</body>
+</html>

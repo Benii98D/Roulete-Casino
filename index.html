@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramienta de Apuestas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="fluid-background"></div>
+    <div class="container">
+        <h1>Herramienta de Apuestas</h1>
+        <form id="betting-form">
+            <div class="form-group">
+                <label for="credito">Crédito:</label>
+                <input type="number" id="credito" name="credito" min="0.01" step="0.01" required>
+                <p id="error-credito" class="error-message"></p>
+            </div>
+            <div class="form-group">
+                <label for="apuesta">Apuesta:</label>
+                <input type="number" id="apuesta" name="apuesta" min="0.01" step="0.01" required>
+                <p id="error-apuesta" class="error-message"></p>
+            </div>
+            <div class="form-group">
+                <label for="veces">Cantidad de veces a repetir:</label>
+                <input type="number" id="veces" name="veces" min="1" step="1" required>
+                <p id="error-veces" class="error-message"></p>
+            </div>
+            <div class="form-group">
+                <label>Color de la apuesta:</label>
+                <div class="color-selection">
+                    <input type="radio" id="color-rojo" name="color" value="Rojo" checked required>
+                    <label for="color-rojo" class="color-button rojo selected">Rojo</label>
+                    <input type="radio" id="color-negro" name="color" value="Negro" required>
+                    <label for="color-negro" class="color-button negro">Negro</label>
+                </div>
+                <p id="error-color" class="error-message"></p>
+            </div>
+            <button type="submit" class="submit-button" disabled>Siguiente</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
